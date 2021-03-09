@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Container" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="680.0" style="-fx-background-color: linear-gradient(to right top, #260537, #2d336c, #22629e, #0093c9, #12c5eb); -fx-border-radius: 10px; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane fx:id="toolBar" prefHeight="64.0" prefWidth="680.0" style="-fx-background-radius: 10px 10px 0px 0px; -fx-border-radius: 10px 10px 0px 0px;" stylesheets="@Style.css" AnchorPane.bottomAnchor="296.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="425.0" layoutY="32.0" text="V1.0" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="256.0" text="LingoBox" textFill="WHITE" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="HoloLens MDL2 Assets" size="42.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="btn_settings" fitHeight="32.0" fitWidth="32.0" layoutX="467.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="116.0" AnchorPane.topAnchor="16.0">
+               <image>
+                  <Image url="@Images/icons8-settings-192.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_minimize" fitHeight="32.0" fitWidth="32.0" layoutX="509.0" layoutY="26.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="16.0">
+               <image>
+                  <Image url="@Images/icons8-minus-96.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_close" fitHeight="32.0" fitWidth="32.0" layoutX="558.0" layoutY="26.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="16.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="16.0">
+               <image>
+                  <Image url="@Images/icons8-multiply-90.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="SettingBox" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <JFXToggleButton fx:id="saveToggle" layoutX="35.0" text="Save OCR file" textFill="WHITE" toggleColor="WHITE" toggleLineColor="#ff2c56" unToggleColor="BLACK">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXToggleButton>
+            <JFXButton fx:id="btn_browse" disable="true" layoutX="497.0" layoutY="11.0" onMousePressed="#fileBrowser" prefHeight="39.0" prefWidth="107.0" ripplerFill="#e11d07" style="-fx-background-color: linear-gradient(to left bottom, #e1084f, #d10061, #bb0072, #a0007f, #7f1789);;" text="Browse..." textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="fileField" disable="true" editable="false" layoutX="203.0" layoutY="14.0" prefHeight="32.0" prefWidth="272.0" text="D:\" />
+            <JFXToggleButton fx:id="hideToogle" layoutX="35.0" layoutY="69.0" text="Hide in Toolbar" textFill="WHITE" toggleColor="WHITE" toggleLineColor="#ff2c56" unToggleColor="BLACK">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXToggleButton>
+            <JFXToggleButton fx:id="owwToggle" layoutX="35.0" layoutY="135.0" text="Open on Window startup" textFill="WHITE" toggleColor="WHITE" toggleLineColor="#ff2c56" unToggleColor="BLACK">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXToggleButton>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="457.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@dragon.png" />
+               </image>
+               <effect>
+                  <DropShadow height="15.0" offsetX="3.0" radius="7.0" width="15.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="369.0" layoutY="214.0" text="Lấy ý tưởng từ việc đọc sách Tiếng Anh Scan ^^" textFill="WHITE" />
+            <Label layoutX="369.0" layoutY="231.0" text="Donate cho mình li cafe qua momo: 0947918905 ik" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="MainBox" layoutX="14.0" layoutY="146.0" prefHeight="200.0" prefWidth="653.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <ImageView fx:id="btn_OCR" fitHeight="96.0" fitWidth="96.0" layoutX="523.0" layoutY="26.0" onMousePressed="#startOCR" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/icons8-general-ocr-96.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="27.0" text="From Language:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="Sourcelang" layoutX="14.0" layoutY="54.0" prefHeight="39.0" prefWidth="210.0" style="-fx-text-fill: #ffffff; -fx-prompt-text-fill: #ff2c56; -fx-font-size:14;" />
+            <JFXComboBox fx:id="Destlang" layoutX="14.0" layoutY="155.0" prefHeight="39.0" prefWidth="210.0" style="-fx-text-fill: #ffffff;-fx-prompt-text-fill: #ff2c56; -fx-font-size:14;" />
+            <Label layoutX="14.0" layoutY="122.0" text="To Language:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="autoToggle" layoutX="351.0" layoutY="89.0" text="Auto Copy" textFill="WHITE" toggleColor="WHITE" toggleLineColor="#ff2c56" unToggleColor="BLACK">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXToggleButton>
+            <Label layoutX="363.0" layoutY="180.0" text="Set Hotkey:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="248.0" text="Made with Java by Son &lt;3" textFill="WHITE" />
+            <JFXToggleButton fx:id="ftransToggle" layoutX="350.0" layoutY="24.0" selected="true" text="Fast translate" textFill="WHITE" toggleColor="WHITE" toggleLineColor="#ff2c56" unToggleColor="BLACK">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXToggleButton>
+            <Separator layoutX="327.0" layoutY="35.0" opacity="0.7" orientation="VERTICAL" prefHeight="200.0" prefWidth="1.0" />
+            <Label layoutX="468.0" layoutY="180.0" text="Ctrl + B" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

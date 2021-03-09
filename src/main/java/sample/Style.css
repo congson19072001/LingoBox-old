@@ -1,0 +1,8 @@
+.combo-box{
+    -fx-prompt-text-fill: #ff2c56;
+    -fx-font-size:14;
+
+}
+.combo-box .cell:selected {
+    -fx-text-fill: #ffd52e;
+}
